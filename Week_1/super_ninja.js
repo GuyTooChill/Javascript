@@ -32,4 +32,5 @@ class Sensei extends Ninja {
 let one = new Sensei ("Diego")
 
 one.sayName()
+one.drinkShake()
 one.showSensei()
