@@ -36,7 +36,7 @@ class Effect extends Card {
 
     play(target) {
         if( target instanceof Unit ) {
-            // implement card text here
+            this.stat == 'power'? target.power += this.magnitude : target.resilience += this.magnitude;
         } 
         else {
             throw new Error( "Target must be a unit!" );
@@ -51,12 +51,16 @@ let effect2 = new Effect ("Unhandled Promise Rejection", 2, "reduce target's res
 let effect3 = new Effect ("Pair Programming", 3, "increase target's power by 2", "power", +2)
 
 red.showUnit()
+// console.log("Hard Algorithm is played on Red Belt Ninja")
 effect1.play(red)
 red.showUnit()
 black.showUnit()
+// console.log("Unhandled Promise Rejection is played on Red Belt Ninja")
 effect2.play(red)
 red.showUnit()
+// console.log("Pair Programming is played on Red Belt Ninja")
 effect3.play(red)
 red.showUnit()
+// console.log("Red Belt Ninja attacks Black Belt Ninja")
 red.attack(black)
 black.showUnit()
