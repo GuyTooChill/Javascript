@@ -23,4 +23,9 @@ const pokémon = Object.freeze([
     { "id": 146, "name": "Moltres",    "types": ["fire", "flying"] },
     { "id": 148, "name": "Dragonair",  "types": ["dragon"] }
     ]);
-    
+
+    const byThree = pokémon.map( (three) => {
+        if (three.id % 3 == 0) {
+        }
+    })
+    console.log(byThree)
