@@ -1,0 +1,11 @@
+Requests made to Pokemon API using Postman
+
+https://pokeapi.co/api/v2/pokemon/pikachu
+
+https://pokeapi.co/api/v2/pokemon/mewtwo
+
+https://pokeapi.co/api/v2/pokemon/charizard
+
+https://pokeapi.co/api/v2/pokemon/blastoise
+
+https://pokeapi.co/api/v2/pokemon/bulbasaur
