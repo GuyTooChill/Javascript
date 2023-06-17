@@ -4,7 +4,6 @@ const port = 8000
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-app.listen(port, () => console.log(`Welcome tarnished`) )
 
 
 const { faker } = require('@faker-js/faker');
@@ -58,3 +57,12 @@ const createObject = () => {
 const createCompanyObject = createObject();
 console.log(createCompanyObject)
 
+
+
+app.get('/api/users/new',(request,response)=>{response.json({user:createUser()})});
+
+app.get('/api/companies/new',(request,response)=>{response.json({user:createCompanyObject()})});
+
+app.get('/api/user/company',(request,response)=>{response.json({user:createUser(),company:createCompanyObject()})});
+
+app.listen(port, () => console.log(`Welcome tarnished`) )
