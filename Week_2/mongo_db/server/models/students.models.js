@@ -11,9 +11,7 @@ const StudentSchema = new mongoose.Schema({
         type: Number,
     },
     birthday: {
-        month: Number,
-        day: Number,
-        year: Number
+        type: Date,
     }
 })
 
