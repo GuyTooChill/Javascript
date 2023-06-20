@@ -19,7 +19,7 @@ module.exports.readOne = (req, res) => {
 }
 
 module.exports.update = (req, res) => {
-    Product.findOneAndUpdate({_id: req.params.id}, req.body)
+    Product.findOneAndUpdate({_id: req.params.id}, req.body, {new:true, runValidators: true})
     .then((updateProduct) => {res.json({results: updateProduct})})
     .catch((error) => {res.json({error: error})})
 }
