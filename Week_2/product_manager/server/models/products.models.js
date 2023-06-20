@@ -10,7 +10,7 @@ const ProductSchema = new mongoose.Schema({
     description: {
         type: String,
     },
-})
+}, {timestamps: true})
 
 const Products = mongoose.model("Products", ProductSchema)
 
