@@ -5,11 +5,13 @@ import axios from 'axios'
 export default function All() {
     const [ productList, setProductList ] = useState([])
 
+
     useEffect(() => {
         axios.get('http://localhost:8000/api/products')
         .then((res) => {setProductList(res.data.results)})
         .catch((err) => {console.log(err)})
     }, [])
+
 
     return (
         <div>
@@ -29,8 +31,7 @@ export default function All() {
                                     <td>{product.price}</td>
                                     <td>
                                         <button> <Link to={`/products/one/${product._id}`}>View</Link></button>|
-                                        <button> <Link to={`/products/edit/${product._id}`}>Edit</Link></button>|
-                                        <button><Link to={`/products/delete/${product._id}`}>Delete</Link></button>
+                                        <button> <Link to={`/products/edit/${product._id}`}>Edit</Link></button>
                                     </td>
                                 </tr>
                             )
