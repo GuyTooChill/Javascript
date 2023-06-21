@@ -14,9 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Landing/>} />
         <Route path='/products/all' element={<All/>} />
-        <Route path='/products/one' element={<One/>} />
         <Route path='/products/one/:id' element={<One/>} />
-        <Route path='/products/edit' element={<Edit/>} />
         <Route path='/products/edit/:id' element={<Edit/>} />
       </Routes>
     </div>

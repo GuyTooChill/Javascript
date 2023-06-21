@@ -21,6 +21,8 @@ export default function One() {
                     <th>Title</th>
                     <th>Price</th>
                     <th>Description</th>
+                    <th>Created On</th>
+                    <th>Updated On</th>
                     <th>Actions</th>
                 </thead>
                 <tbody>
@@ -28,9 +30,11 @@ export default function One() {
                         <td>{product.title}</td>
                         <td>{product.price}</td>
                         <td>{product.description}</td>
+                        <td>{product.createdAt}</td>
+                        <td>{product.updatedAt}</td>
                         <td>
                             <button> <Link to={`/products/edit/${product._id}`}>Edit</Link></button>|
-                            <button>Delete</button>
+                            <button><Link to={`/products/delete/${product._id}`}>Delete</Link></button>
                         </td>
                     </tr>
                     

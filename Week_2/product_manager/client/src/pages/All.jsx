@@ -30,7 +30,7 @@ export default function All() {
                                     <td>
                                         <button> <Link to={`/products/one/${product._id}`}>View</Link></button>|
                                         <button> <Link to={`/products/edit/${product._id}`}>Edit</Link></button>|
-                                        <button>Delete</button>
+                                        <button><Link to={`/products/delete/${product._id}`}>Delete</Link></button>
                                     </td>
                                 </tr>
                             )
