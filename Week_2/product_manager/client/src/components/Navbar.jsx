@@ -1,9 +1,24 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     return (
         <div>
-            This is the Navbar section!
+            <h1>This is the Navbar Section!</h1>
+            <ul>
+                <li>
+                    <Link to='/'>Home</Link>
+                </li>
+                <li>
+                    <Link to='/products/all'>All</Link>
+                </li>
+                <li>
+                    <Link to='/products/one'>One</Link>
+                </li>
+                <li>
+                    <Link to='/products/edit'>Edit</Link>
+                </li>
+            </ul>
         </div>
     )
 }
