@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
     return (
         <div>
-            <h1>This is the Navbar Section!</h1>
+            <h1>Create or View Products!</h1>
             <ul>
                 <li>
                     <Link to='/'>Home</Link>
