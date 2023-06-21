@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
@@ -29,8 +28,8 @@ export default function All() {
                                     <td>{product.title}</td>
                                     <td>{product.price}</td>
                                     <td>
-                                        <button>View</button>|
-                                        <button>Edit</button>|
+                                        <button> <Link to={`/products/one/${product._id}`}>View</Link></button>|
+                                        <button> <Link to={`/products/edit/${product._id}`}>Edit</Link></button>|
                                         <button>Delete</button>
                                     </td>
                                 </tr>

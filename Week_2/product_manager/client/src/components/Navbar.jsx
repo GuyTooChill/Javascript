@@ -12,12 +12,12 @@ export default function Navbar() {
                 <li>
                     <Link to='/products/all'>All</Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to='/products/one'>One</Link>
                 </li>
                 <li>
                     <Link to='/products/edit'>Edit</Link>
-                </li>
+                </li> */}
             </ul>
         </div>
     )

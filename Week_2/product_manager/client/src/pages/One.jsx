@@ -5,12 +5,13 @@ import axios from 'axios'
 
 export default function One() {
     const [ product, setProduct] = useState('')
+    const {id} = useParams()
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/products/${product._id}`)
-        .then((res) => {setProduct(res)})
+        axios.get(`http://localhost:8000/api/products/${id}`)
+        .then((res) => {setProduct(res.data.results)})
         .catch((err) => {console.log(err)})
-    })
+    }, [])
 
     return (
         <div>
@@ -20,13 +21,19 @@ export default function One() {
                     <th>Title</th>
                     <th>Price</th>
                     <th>Description</th>
+                    <th>Actions</th>
                 </thead>
                 <tbody>
                     <tr>
                         <td>{product.title}</td>
                         <td>{product.price}</td>
                         <td>{product.description}</td>
+                        <td>
+                            <button> <Link to={`/products/edit/${product._id}`}>Edit</Link></button>|
+                            <button>Delete</button>
+                        </td>
                     </tr>
+                    
                 </tbody>
             </table>
         </div>
