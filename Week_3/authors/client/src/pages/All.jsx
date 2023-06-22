@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 export default function All() {
     const [ authorList, setAuthorList ] = useState([])
-    const navigate = useNavigate()
 
     useEffect(() => {
         getAllAuthors();
@@ -19,7 +18,9 @@ export default function All() {
     const deleteAuthor = (id) => {
         axios.delete(`http://localhost:8000/api/authors/`+id)
         .then(() => {
-            getAllAuthors();
+            const newAuthors = authorList.filter((author) => author._id !== id)
+            console.log(newAuthors)
+            setAuthorList(newAuthors)
         })
         .catch((err) => {console.log(err)})
     }
