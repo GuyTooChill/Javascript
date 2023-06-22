@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
 export default function All() {
@@ -8,18 +7,21 @@ export default function All() {
     const navigate = useNavigate()
 
     useEffect(() => {
+        getAllAuthors();
+    }, [])
+
+    const getAllAuthors = () => {
         axios.get('http://localhost:8000/api/authors')
         .then((res) => {setAuthorList(res.data.results)})
         .catch((err) => {console.log(err)})
-    }, [])
+    }
 
     const deleteAuthor = (id) => {
         axios.delete(`http://localhost:8000/api/authors/`+id)
         .then(() => {
-        navigate('/authors/all')
+            getAllAuthors();
         })
         .catch((err) => {console.log(err)})
-        navigate('/authors/all')
     }
 
 
