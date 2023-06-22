@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const AuthorSchema = new mongoose.Schema({
-    Name: {
+    name: {
         type: String,
     }
 }, {timestamps: true})

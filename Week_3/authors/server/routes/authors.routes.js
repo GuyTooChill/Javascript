@@ -1,13 +1,13 @@
 const AuthorsController = require('../controllers/authors.controller')
 
 module.exports = (app) => {
-    app.post('/api/products/new', AuthorsController.createAuthor)
+    app.post('/api/authors/new', AuthorsController.createAuthor)
 
-    app.get('/api/products', AuthorsController.allAuthors)
+    app.get('/api/authors', AuthorsController.allAuthors)
 
-    app.get('/api/products/:id', AuthorsController.readOne)
+    app.get('/api/authors/:id', AuthorsController.readOne)
 
-    app.put('/api/products/:id', AuthorsController.update)
+    app.put('/api/authors/:id', AuthorsController.update)
 
-    app.delete('/api/products/:id', AuthorsController.delete)
+    app.delete('/api/authors/:id', AuthorsController.delete)
 }
