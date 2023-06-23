@@ -12,12 +12,6 @@ export default function Navbar() {
                 <li>
                     <Link to='/authors/all'>All</Link>
                 </li>
-                {/* <li>
-                    <Link to='/authors/one'>One</Link>
-                </li>
-                <li>
-                    <Link to='/authors/edit'>Edit</Link>
-                </li> */}
             </ul>
         </div>
     )
