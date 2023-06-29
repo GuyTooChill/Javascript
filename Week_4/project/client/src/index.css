@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar section ******************************************* */
+.navbar {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  /* background-image: url('https://images.alphacoders.com/881/881848.jpg'); */
+}
+
+.navbar button {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.navbar img {
+width: 100px;
+}
+
+/* Landing page ********************************************************  */
+
+.landing {
+  max-width: 1000px;
+  margin: auto;
+}
+.content {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 800px;
+}
+
+.contentbtns {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.contentbtns button{
+  padding: 5px;
+}
+
+/* Information *********************************************************** */
+
+.info {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Programs *********************************************************** */
+
+.program {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Nutrition *********************************************************** */
+
+.nutrition {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+/* Login *************************************************************** */
+
+.form {
+  max-width: 1000px;
+  margin: auto;
+  align-items: center;
+}
+
+
+
+/* Register *************************************************************** */
