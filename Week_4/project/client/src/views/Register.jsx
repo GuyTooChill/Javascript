@@ -3,7 +3,6 @@ import React from 'react'
 export default function Register() {
     return (
         <div>
-            <h1>This is register</h1>
             <form className='form' id='register'>
                 <div>
                     <label htmlFor="username">Username:</label>

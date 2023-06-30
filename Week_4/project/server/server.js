@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(cors())
 require('./config/mongoose.config')
 
-const Routes = require('./routes/accounts.routes')
+const Routes = require('./routes/workouts.routes')
 Routes(app)
 
 app.listen(port, () => console.log('Welcome Tarnished.'))

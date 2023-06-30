@@ -11,10 +11,10 @@ export default function Landing() {
             </div>
             <div className='content'>
                 <div className='lefthome'>
-                    <h2>This will be the left section (current program)</h2>
+                    <h2>Current Program</h2>
                 </div>
                 <div className='righthome'>
-                    <h2>This will be the right section (nutrition plan)</h2>
+                    <h2>Nutrition Plan</h2>
                 </div>
             </div>
         </div>
